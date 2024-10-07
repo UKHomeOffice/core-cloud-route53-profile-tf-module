@@ -4,7 +4,7 @@ resource "aws_cloudformation_stack" "this" {
   capabilities = ["CAPABILITY_AUTO_EXPAND"]
 
   parameters = {
-    r53PhzZoneIds = jsonencode(var.r53_zone_ids)
+    r53PhzZoneIds = join(",",var.r53_zone_ids)
   }
 
   template_body = templatefile("${path.module}/cloudformation_templates/route53_profile.yaml.tftpl", {
