@@ -41,6 +41,7 @@ No modules.
 |------|-------------|------|---------|:--------:|
 | <a name="input_r53_profile_name"></a> [r53\_profile\_name](#input\_r53\_profile\_name) | The name of the route53 profile | `string` | n/a | yes |
 | <a name="input_r53_zone_ids"></a> [r53\_zone\_ids](#input\_r53\_zone\_ids) | The list of Route53 Private Zone IDs to associate with the Route53 Profile | `list(string)` | n/a | yes |
+| <a name="input_tags"></a> [tags](#input\_tags) | A map of tags to add to all resources | `map(string)` | `{}` | no |
 
 ## Outputs
 
