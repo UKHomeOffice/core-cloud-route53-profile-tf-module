@@ -1,0 +1,24 @@
+AWSTemplateFormatVersion: 2010-09-09
+Transform: 'AWS::LanguageExtensions'
+Parameters:
+  r53PhzZoneIds:
+    Description: A list of Route53 Private Hosted Zone IDs to be associated with the R53 Profile
+    Type: CommaDelimitedList
+Resources:
+  r53Profile:
+    Type: AWS::Route53Profiles::Profile
+    Properties:
+      Name: "${r53_profile_name}"
+  'Fn::ForEach::phzLoop':
+    - phz
+    - !Ref r53PhzZoneIds
+    - '$${phz}':
+        Type: "AWS::Route53Profiles::ProfileResourceAssociation"
+        Properties:
+          Name: !Ref phz
+          ProfileId: !GetAtt r53Profile.Id
+          ResourceArn: 
+            'Fn::Join':
+            - '/'
+            - - arn:aws:route53:::hostedzone
+              - !Ref phz
