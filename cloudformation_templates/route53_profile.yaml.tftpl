@@ -9,15 +9,15 @@ Resources:
     Type: AWS::Route53Profiles::Profile
     Properties:
       Name: "${r53_profile_name}"
-  'Fn::ForEach::PHZ':
+  'Fn::ForEach::phzLoop':
     - phz
     - !Ref r53PhzZoneIds
     - '$${phz}':
-      Type: "AWS::Route53Profiles::ProfileResourceAssociation"
-      Properties:
-        Name: !Ref phz
-        ProfileId: !GetAtt r53Profile.Id
-        ResourceArn: 
+        Type: "AWS::Route53Profiles::ProfileResourceAssociation"
+        Properties:
+          Name: !Ref phz
+          ProfileId: !GetAtt r53Profile.Id
+          ResourceArn: 
             'Fn::Join':
             - '/'
             - - arn:aws:route53:::hostedzone
