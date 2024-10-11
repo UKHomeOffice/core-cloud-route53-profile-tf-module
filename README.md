@@ -1,6 +1,3 @@
-## Caveat
-This is currently using cloud formation to deploy and manage Route53 Profiles while we wait for Terraform to add official support (https://github.com/hashicorp/terraform-provider-aws/issues/37050). This module will be refactored once official support is in place.
-
 ## Example Usage
 ```
  module "r53_profile" {
