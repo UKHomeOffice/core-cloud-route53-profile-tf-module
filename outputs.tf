@@ -11,9 +11,9 @@ output "route53_profile_id" {
 }
 
 output "aws_route53profiles_resource_association_name" {
-  value = aws_route53profiles_resource_association.this[*].name
+  value = values(aws_route53profiles_resource_association.this)[*].name
 }
 
 output "aws_route53profiles_resource_association_id" {
-  value = aws_route53profiles_resource_association.this[*].id
+  value = values(aws_route53profiles_resource_association.this)[*].id
 }
