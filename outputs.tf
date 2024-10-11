@@ -1,7 +1,19 @@
-output "cloudformation_id" {
-  value = aws_cloudformation_stack.this.id
+output "route53_profile_name" {
+  value = aws_route53profiles_profile.this.name
 }
 
-output "cloudformation_output" {
-  value = aws_cloudformation_stack.this.outputs
+output "route53_profile_arn" {
+  value = aws_route53profiles_profile.this.arn
+}
+
+output "route53_profile_id" {
+  value = aws_route53profiles_profile.this.arn
+}
+
+output "aws_route53profiles_resource_association_name" {
+  value = aws_route53profiles_resource_association.this[*].name
+}
+
+output "aws_route53profiles_resource_association_id" {
+  value = aws_route53profiles_resource_association.this[*].id
 }

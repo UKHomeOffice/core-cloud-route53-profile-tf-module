@@ -33,7 +33,8 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [aws_cloudformation_stack.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudformation_stack) | resource |
+| [aws_route53profiles_profile.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/route53profiles_profile) | resource |
+| [aws_route53profiles_resource_association.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/route53profiles_resource_association) | resource |
 
 ## Inputs
 
@@ -47,6 +48,9 @@ No modules.
 
 | Name | Description |
 |------|-------------|
-| <a name="output_cloudformation_id"></a> [cloudformation\_id](#output\_cloudformation\_id) | n/a |
-| <a name="output_cloudformation_output"></a> [cloudformation\_output](#output\_cloudformation\_output) | n/a |
+| <a name="output_aws_route53profiles_resource_association_id"></a> [aws\_route53profiles\_resource\_association\_id](#output\_aws\_route53profiles\_resource\_association\_id) | n/a |
+| <a name="output_aws_route53profiles_resource_association_name"></a> [aws\_route53profiles\_resource\_association\_name](#output\_aws\_route53profiles\_resource\_association\_name) | n/a |
+| <a name="output_route53_profile_arn"></a> [route53\_profile\_arn](#output\_route53\_profile\_arn) | n/a |
+| <a name="output_route53_profile_id"></a> [route53\_profile\_id](#output\_route53\_profile\_id) | n/a |
+| <a name="output_route53_profile_name"></a> [route53\_profile\_name](#output\_route53\_profile\_name) | n/a |
 <!-- END_TF_DOCS -->
