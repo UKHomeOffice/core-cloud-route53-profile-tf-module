@@ -8,5 +8,5 @@ resource "aws_route53profiles_resource_association" "this" {
 
   name         = each.key
   profile_id   = aws_route53profiles_profile.this.id
-  resource_arn = "arn:aws:route53:::${each.key}"
+  resource_arn = "arn:aws:route53:::hostedzone/${each.key}"
 }
